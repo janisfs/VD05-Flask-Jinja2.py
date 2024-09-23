@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Вы должны выложить {{number}} <!-- Ниже блок выводит количество постов -->
+    {% if number == 1 %}
+        пост
+    {% elif number > 1 and number < 5 %}   # {% elif 2 <= number <= 4 %}
+        поста
+    {% else %}
+        постов
+    {% endif %}
+    </p>
+    <p>  <!-- Ниже блок выводит список пользователей -->
+        {% for user in list %}
+            {{user}}
+        {% endfor %}
+    </p>
+    <h1>Стихотворение Пушкина</h1> <!-- Ниже блок выводит стих Пушкина -->
+    <p>
+        {% for i in poem %}
+            {{i}}<br>
+        {% endfor %}
+    </p>
+
+
+
+</body>
+</html>
